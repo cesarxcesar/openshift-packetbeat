@@ -6,7 +6,7 @@ WORKDIR /opt/
 ENV VERSION=7.15.2 ARCH=x86_64 EXTENSION=tar.gz
 ENV FILENAME=packetbeat-${VERSION}-linux-${ARCH}.${EXTENSION}
 
-RUN wget https://download.elastic.co/beats/packetbeat/${FILENAME} && tar zxvf ${FILENAME}
+RUN wget https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-7.15.2-linux-x86_64.tar.gz && tar zxvf ${FILENAME}
 
 WORKDIR packetbeat-${VERSION}-${ARCH}
 #ADD packetbeat.yml packetbeat.yml
