@@ -8,8 +8,8 @@ ENV FILENAME=packetbeat-${VERSION}-linux-${ARCH}.${EXTENSION}
 
 RUN wget https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-7.15.2-linux-x86_64.tar.gz && tar zxvf ${FILENAME}
 
-WORKDIR packetbeat-${VERSION}-${ARCH}
+WORKDIR packetbeat-7.15.2-x86_64
 #ADD packetbeat.yml packetbeat.yml
 
-RUN setcap cap_net_raw=ep /opt/packetbeat-${VERSION}-${ARCH}/packetbeat
+RUN setcap cap_net_raw=ep /opt/packetbeat-7.15.2-x86_64/packetbeat
 CMD ["./packetbeat", "-e", "-c=config/packetbeat.yml"]
