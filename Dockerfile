@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum -y install libpcap wget net-tools && yum update -y && yum clean all -y
 
 WORKDIR /opt/
-ENV VERSION=1.3.0 ARCH=x86_64 EXTENSION=tar.gz
+ENV VERSION=7.15.2 ARCH=x86_64 EXTENSION=tar.gz
 ENV FILENAME=packetbeat-${VERSION}-${ARCH}.${EXTENSION}
 
 RUN wget https://download.elastic.co/beats/packetbeat/${FILENAME} && tar zxvf ${FILENAME}
